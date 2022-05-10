@@ -114,7 +114,7 @@ Congratulations! If you use free domaine, you register you domain in AWS Route53
 
 <p align="center">
   <img src="images/13. Choose name of AWS EC2.png" alt="Choose name of AWS EC2"/>
-  <img src="images/14. Choose OS and instance type of EC2.png" alt="Choose OS and instance type of AWS EC2"/>
+  <img src="images/14. Choose OS and instance type of AWS EC2.png" alt="Choose OS and instance type of AWS EC2"/>
 </p>
 
 2.2 Choose `key pair` if you want to SSH conncection to server. If it is your first type, firtsly create key pair and download private key, you will need that key wor SSH conncection.
