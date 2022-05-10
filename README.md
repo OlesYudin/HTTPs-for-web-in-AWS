@@ -1,6 +1,4 @@
-**TEST**
-
-Youtube guide: https://www.youtube.com/watch?v=bWPTq8z1vFY
+# <div align="center">Secure connection for WEB-application in AWS</div>
 
 Create domaine
 Register Domaine in AWS Route53
