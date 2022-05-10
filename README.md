@@ -226,10 +226,10 @@ In my case i use this configuration:
 
 <p align="center">
   <img src="images/31. Creation of ALB (1).png" alt="Creation of Application Load Balancer"/>
-  <img src="images/31. Creation of ALB (2).png" alt="Creation of Application Load Balancer (network)"/>
-  <img src="images/31. Creation of ALB (3).png" alt="Creation of Application Load Balancer (security group)"/>
-  <img src="images/31. Creation of ALB (4).png" alt="Creation of Application Load Balancer (listeners)"/>
-  <img src="images/31. Creation of ALB (5).png" alt="Creation of Application Load Balancer (additional)"/>
+  <img src="images/32. Creation of ALB (2).png" alt="Creation of Application Load Balancer (network)"/>
+  <img src="images/33. Creation of ALB (3).png" alt="Creation of Application Load Balancer (security group)"/>
+  <img src="images/34. Creation of ALB (4).png" alt="Creation of Application Load Balancer (listeners)"/>
+  <img src="images/35. Creation of ALB (5).png" alt="Creation of Application Load Balancer (additional)"/>
 </p>
 
 After configuration of ALB, you can click on `Create load balancer`
