@@ -1,3 +1,5 @@
+**TEST**
+
 Youtube guide: https://www.youtube.com/watch?v=bWPTq8z1vFY
 
 Create domaine
@@ -211,4 +213,48 @@ You can choose what type of load balancer you want. AWS support [Classic Load Ba
 
 <p align="center">
   <img src="images/30. Create ALB.png" alt="Create Application Load Balancer"/>
+</p>
+
+2.2 Choose `Aplication Load Balancer` and click on `Create`
+
+2.3 Now you can configure your load balancer
+
+In my case i use this configuration:
+
+| Type                       | value                                               |
+| -------------------------- | --------------------------------------------------- |
+| Name                       | webserver-alb                                       |
+| Scheme                     | Internet-facing                                     |
+| IP address type            | IPv4                                                |
+| VPC                        | default                                             |
+| Mappings                   | us-east-2(a,b,c)                                    |
+| Security groups            | Open ports: 80, 443 (HTTP, HTTPs)                   |
+| Listeners and routings     | HTTP, HTTPs (default action: TG from previous step) |
+| Security listener settings | ELBSecurityPolicy-2016-08, From ACM                 |
+
+<p align="center">
+  <img src="images/31. Creation of ALB (1).png" alt="Creation of Application Load Balancer"/>
+  <img src="images/31. Creation of ALB (2).png" alt="Creation of Application Load Balancer (network)"/>
+  <img src="images/31. Creation of ALB (3).png" alt="Creation of Application Load Balancer (security group)"/>
+  <img src="images/31. Creation of ALB (4).png" alt="Creation of Application Load Balancer (listeners)"/>
+  <img src="images/31. Creation of ALB (5).png" alt="Creation of Application Load Balancer (additional)"/>
+</p>
+
+After configuration of ALB, you can click on `Create load balancer`
+
+2.4 Create new record for ALB in Route53
+
+Return to [AWS Route53](https://aws.amazon.com/route53 "AWS Route53") and go to your domain. Click on `create record`. If you need to register you ALB with the same address as the domain, you could leave the field empty `Record name`. Go to `Alias name` and press checkbox `Yes`. In alias you need to select `Application Load Balancer`, select you `region` and click on youe `Application load balancer`.
+
+<p align="center">
+  <img src="images/36. Creat record for Route53 from ALB.png" alt="Create record in AWS Route53 from ALB"/>
+  <img src="images/37. New record for ALB from Route53.png" alt="New record for Application Load Balancer from Route53"/>
+</p>
+
+2.5 Create redirection from 80 to 433 ports
+It is optional step, but if you want to have redirection from HTTP to HTTPs, you can return to `Application Load Balancer`, choose your ALB and click on `Listeners`. Choose `HTTP: 80` and click on `edit`. Remove `forwarding` as a default option and select `redirection` with 443 port.
+
+<p align="center">
+  <img src="images/38. Redirection from 80 to 443 (1).png" alt="Edit redirection from HTTP to HTTPs in ALB"/>
+  <img src="images/39. Redirection from 80 to 443 (2).png" alt="Edit redirection from HTTP to HTTPs in ALB (configuration)"/>
 </p>
