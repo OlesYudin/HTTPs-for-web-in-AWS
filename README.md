@@ -1,12 +1,6 @@
 # <div align="center">Secure connection for WEB-application in AWS</div>
 
-Create domaine
-Register Domaine in AWS Route53
-Create certificate for TLS in AWS Certificate Manager
-Create EC2 intstance
-Create ALB and Target Groups
-Associate target group with instance
-Create new recoder in Route53
+This project describe how to create secure connection with HTTPs protocol wth AWS resources
 
 ## Create domaine
 
