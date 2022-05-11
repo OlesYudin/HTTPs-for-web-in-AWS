@@ -76,7 +76,7 @@ Congratulations! If you use free domaine, you register you domain in AWS Route53
 ### 2. Click on `Request a public certificate`.
 
 <p align="center">
-  <img src="images/3. Request public cert in AWS SM.png" alt="Request a public certificate in AWS SM"/>
+  <img src="images/6. Request public cert in AWS SM.png" alt="Request a public certificate in AWS SM"/>
 </p>
 
 ### 3. Write full name of domaine, than choose validation method. If you use `DNS validation` - you will add extra record on Route53 to validate your domaine from AWS (it is \*recommended\*\* way). If you use `Email validation` - you will recive validation massage on your domaine email (for example: admin@lisenok-aws.tk). Than choose tags if it necessary for you and click `Request`.
