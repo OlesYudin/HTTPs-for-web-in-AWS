@@ -144,6 +144,13 @@ AWS has differant types of storage, you can reed about it [here](https://docs.aw
 2.5 Add `user data`.
 CLick on `Advance settings` and scroll down. Copy/paste [this](script/user_data.sh "this") script and paste into `user data`. This script will be running after installation of OS and install to your server [Apache2](https://httpd.apache.org/ "Apache2"). Also you can customize this user data if nessecary.
 
+```bash
+#!/bin/bash
+sudo apt update
+sudo apt dist-upgrade -y
+sudo apt install -y apache2
+```
+
 <p align="center">
   <img src="images/20. User data for AWS EC2.png" alt="User data for AWS EC2"/>
 </p>
