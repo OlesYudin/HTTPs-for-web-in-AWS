@@ -79,25 +79,33 @@ Congratulations! If you use free domaine, you register you domain in AWS Route53
   <img src="images/6. Request public cert in AWS SM.png" alt="Request a public certificate in AWS SM"/>
 </p>
 
-### 3. Write full name of domaine, than choose validation method. If you use `DNS validation` - you will add extra record on Route53 to validate your domaine from AWS (it is \*recommended\*\* way). If you use `Email validation` - you will recive validation massage on your domaine email (for example: admin@lisenok-aws.tk). Than choose tags if it necessary for you and click `Request`.
+### 3. Configure your certficate.
+
+Write full name of domaine, than choose validation method. If you use `DNS validation` - you will add extra record on Route53 to validate your domaine from AWS (it is \*recommended\*\* way). If you use `Email validation` - you will recive validation massage on your domaine email (for example: admin@lisenok-aws.tk). Than choose tags if it necessary for you and click `Request`.
 
 <p align="center">
   <img src="images/7. Request public cert in AWS CM (2).png" alt="Request public certificate in AWS CM"/>
 </p>
 
-### 4. You will see Domains something like this. You need copy `CNAME name` and `CNAME value`.
+### 4. Copy your certificate.
+
+You will see Domains something like this. You need copy `CNAME name` and `CNAME value`.
 
 <p align="center">
   <img src="images/8. Certificate domaine.png" alt="Certificate domaine"/>
 </p>
 
-### 5. Now you certificate has "pending" status. You need to create new record on [AWS Route53](https://aws.amazon.com/route53 "AWS Route53"). Return to Route53, choose your `hosted zone` and click on `Create record`.
+### 5. Create new record in [AWS Route53](https://aws.amazon.com/route53 "AWS Route53").
+
+Now your certificate has "pending" status. You need to create new record on [AWS Route53](https://aws.amazon.com/route53 "AWS Route53"). Return to Route53, choose your `hosted zone` and click on `Create record`.
 
 <p align="center">
   <img src="images/9. Create record in Route53.png" alt="Create new record in Route53"/>
 </p>
 
-### 6. When you create new record, you need:
+### 6. Configuration of new record
+
+When you create new record, you need:
 
 - Paste `CNAME name` to `Record name`. Be carefull, and remove from CNAME your domaine name. For example, in my case I remove `.lixenok-aws.tk.`.
 - Choose `CNAME - Routes traffis to another domaine name and to some AWS resources` as a `record type`
@@ -108,7 +116,9 @@ Congratulations! If you use free domaine, you register you domain in AWS Route53
   <img src="images/10. Create CNAME record in Route53.png" alt="Create CNAME record in Route53"/>
 </p>
 
-### 7. Wait 1-2 minutes and your certificate will have `Success` status
+### 7. Waiting for confirmation
+
+Wait 1-2 minutes and your certificate will have `Success` status
 
 <p align="center">
   <img src="images/11. Success AWS CM.png" alt="Success status on AWS CM"/>
